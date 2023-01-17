@@ -16,14 +16,12 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
 
-         
       - name: Set up Docker Buildx
         id: buildx
         uses: crazy-max/ghaction-docker-buildx@v3
         with:
           buildx-version: latest
           qemu-version: latest
-
          
       - name: Build and Publish
         run: |
